@@ -41,17 +41,20 @@ print("4: Nowadays people think HO HO HO means Nicole Richie standing next to th
 question5 = int(input("Select 1-4 for your answer: ")) 
 print("")
 
+answers= [question1,question2,question3,question4,question5]
 
-while question1 == 1 and question2 == 1 and question3 == 1 and question4 == 1 and question5 == 1:
+def most_frequent(List):
+    return max(set(List), key= List.count)
+
+freq= most_frequent(answers)
+
+if freq == 1:
     print(userName + " you are Huey")
-    break
-while question1 == 2 and question2 == 2 and question3 == 2 and question4 == 2 and question5 == 2:
-    print(userName + " you are Riely")
-    break
-while question1 == 3 and question2 == 3 and question3 == 3 and question4 == 3 and question5 == 3:
-    print(userName + " you are Granddad")
-    break
+elif freq == 2:
+    print(userName + " you are Huey")
 
-while question1 == 4 and question2 == 4 and question3 == 4 and question4 == 4 and question5 == 4:
+elif freq == 3:
+    print(userName + " you are Granddad")
+
+elif freq == 4:
     print(userName + " you are Jazmine")
-    break
